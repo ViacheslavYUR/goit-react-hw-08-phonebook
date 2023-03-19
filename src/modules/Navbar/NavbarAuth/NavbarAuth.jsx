@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import css from './navbar-auth.module.css';
+
+import css from './navbarAuth.module.css';
 
 const NavbarAuth = () => {
   return (
@@ -7,8 +8,9 @@ const NavbarAuth = () => {
       <NavLink to="/register" className={css.link}>
         Register
       </NavLink>
+      <span className={css.span}>|</span>
       <NavLink to="/login" className={css.link}>
-        login
+        Login
       </NavLink>
     </div>
   );

@@ -1,0 +1,14 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.link:global(.active) {
+  color: green;
+  font-weight: bold;
+}
+
+.span {
+  margin: 0px 10px;
+}

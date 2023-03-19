@@ -1,17 +1,21 @@
+import TextField from 'shared/components/TextField/TextField';
+import Button from 'shared/components/Button/Button';
+
 import useForm from 'shared/hooks/useForm';
 
-import css from './login-form.module.css';
-
-import initialState from './instialState';
-import TextField from 'shared/components/TextFild/TextField';
-import Button from 'shared/components/Batton/Button';
 import fields from './fields';
+import initialState from './initialState';
+
+import PropTypes from 'prop-types';
+
+import css from './loginForm.module.css';
 
 const LoginForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
     initialState,
     onSubmit,
   });
+
   const { email, password } = state;
 
   return (
@@ -28,3 +32,7 @@ const LoginForm = ({ onSubmit }) => {
 };
 
 export default LoginForm;
+
+LoginForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

@@ -7,7 +7,7 @@ const fields = {
     placeholder: 'User email',
   },
   password: {
-    type: 'password',
+    type: 'text',
     name: 'password',
     required: true,
     label: 'User password',

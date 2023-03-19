@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px 40px;
+  align-items: center;
+  border-bottom: 1px dashed black;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 30px;
+}
+.input {
+  width: 200px;
+
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input:focus {
+  outline: none;
+  border: 2px solid #69ef81;
+}

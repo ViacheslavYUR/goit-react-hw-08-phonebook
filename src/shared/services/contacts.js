@@ -1,12 +1,12 @@
-import instance from './auth';
+import instance from 'shared/api/auth';
 
 export const getAllContacts = async () => {
-  const { data } = await instance.get('/contacts/');
+  const { data } = await instance.get('/contacts');
   return data;
 };
 
 export const addContact = async data => {
-  const { data: result } = await instance.post('/contacts/', data);
+  const { data: result } = await instance.post('/contacts', data);
   return result;
 };
 

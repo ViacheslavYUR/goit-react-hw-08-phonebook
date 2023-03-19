@@ -1,17 +1,21 @@
+import TextField from 'shared/components/TextField/TextField';
+import Button from 'shared/components/Button/Button';
+
 import useForm from 'shared/hooks/useForm';
 
-import css from './register-form.module.css';
-
-import initialState from './instialState';
-import TextField from 'shared/components/TextFild/TextField';
-import Button from 'shared/components/Batton/Button';
 import fields from './fields';
+import initialState from './initialState';
+
+import PropTypes from 'prop-types';
+
+import css from './registerForm.module.css';
 
 const RegisterForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
     initialState,
     onSubmit,
   });
+
   const { name, email, password } = state;
 
   return (
@@ -29,3 +33,7 @@ const RegisterForm = ({ onSubmit }) => {
 };
 
 export default RegisterForm;
+
+RegisterForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
