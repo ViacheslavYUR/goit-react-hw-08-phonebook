@@ -14,12 +14,12 @@ const App = () => {
   return (
     <Provider store={store} loading={<Loader />}>
       <PersistGate persistor={persistor} loading={<Loader />}>
-        <AuthProvider>
-          <BrowserRouter>
+        <BrowserRouter>
+          <AuthProvider>
             <Navbar />
             <UserRoutes />
-          </BrowserRouter>
-        </AuthProvider>
+          </AuthProvider>
+        </BrowserRouter>
       </PersistGate>
     </Provider>
   );
